@@ -18,4 +18,4 @@ Here ,Our spring boot application running in docker container will communicate w
 MySql image is running in docker container which has been defined in docker compose file
 Demo service image is running aindocker container -> In application.yaml url is mysqldb:3306(mysqldb is service name in docker compose)
 ## Description
-Now here Both images are defined as services in docker compose file. Now demo container can communicate with mysql engine which is running in another container through a default network because when we define service in docker compose file then all the service defined in docker compose file can communicate with each other using service names as well same ports.
+Now here Both images are defined  as services in docker compose file. Now demo container can communicate with mysql engine which is running in another container through a default network because when we define service in docker compose file then all the service defined in docker compose file can communicate with each other using service names as well same ports. 
