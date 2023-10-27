@@ -1,0 +1,31 @@
+version: "3.8"
+services:
+  demo-service:
+    image: anuhyac/demo:1.1
+    build: .
+    ports:
+      - "8081:8081"
+    restart: always
+    depends_on:
+      - mysqldb
+    environment:
+      serverport: 8081
+      HOST: mysqldb
+      DB_USER: dockeruser
+      DB_PASSWORD: anuhyac
+      DB_NAME: registration
+      MYSQL_PORT: 3306
+  mysqldb:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: registration
+      MYSQL_USER: dockeruser
+      MYSQL_PASSWORD: anuhyac
+      MYSQL_ROOT_PASSWORD: anuhya86
+    ports:
+      - '3307:3306'
+    volumes:
+      - my-db:/var/lib/mysql
+# Names our volume
+volumes:
+  my-db:

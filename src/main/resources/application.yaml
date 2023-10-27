@@ -1,0 +1,24 @@
+#192.168.0.108
+server:
+  port: ${serverport:8080}
+spring:
+  datasource:
+    url: jdbc:mysql://${HOST:localhost}:${MYSQL_PORT:3306}/${DB_NAME:registration}?createDatabaseIfNotExist=true
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD:anuhya86}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+#spring:
+#  datasource:
+#    url: jdbc:h2:mem:mydb
+#    username: sa
+#    password: anuhyac
+#  h2:
+#    console:
+#      enabled: true
+#      settings:
+#        web-allow-others: true
+
+
